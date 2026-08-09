@@ -3,8 +3,8 @@ class ReviewPantheon < Formula
 
   desc "Fail-closed AI review gate: hunter/verifier twins plus philosopher counsel"
   homepage "https://github.com/G-Schumacher44/review-pantheon"
-  url "https://files.pythonhosted.org/packages/bb/54/f51f735e85aee72c453f6650ce6828102f1f0831fa5fd7b4b61ab4193ddb/review_pantheon-0.1.0.tar.gz"
-  sha256 "d4644f98bd51321a33c236bf5985b0946f46e3c611de466f3092a96566d7d721"
+  url "https://files.pythonhosted.org/packages/a6/44/50ce2dc2a10d823836fb66f9de657cf1722a1cf91aef363698e3c06c1be4/review_pantheon-0.2.0.tar.gz"
+  sha256 "303adf51a6e5e5d00f21294522614aeeb6c093f02ced8876609052d2325f1165"
   license "MIT"
 
   depends_on "python@3.13"
@@ -17,6 +17,6 @@ class ReviewPantheon < Formula
   test do
     # No provider CLI in the test sandbox, so exercise the entry points' own surfaces.
     assert_match "pantheon", shell_output("#{bin}/pantheon --help")
-    assert_match "0.1.0", shell_output("#{libexec}/bin/python -c 'import pantheon; print(pantheon.__version__)'")
+    assert_match "0.2.0", shell_output("#{libexec}/bin/python -c 'import pantheon; print(pantheon.__version__)'")
   end
 end
